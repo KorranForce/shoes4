@@ -23,11 +23,11 @@ module Warbler
         true
       end
 
-      def self.requires?(trait)
+      def self.requirements
         # Actually, it would be better to dump the NoGemspec trait, but since
         # we can't do that, we can at least make sure that this trait gets
         # processed later by declaring that it requires NoGemspec.
-        [Traits::Jar, Traits::NoGemspec].include? trait
+        [Traits::Jar, Traits::NoGemspec]
       end
 
       INIT_CONTENTS = <<~EOS
